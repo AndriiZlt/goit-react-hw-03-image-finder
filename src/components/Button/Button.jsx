@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 class Button extends React.Component {
   render() {
     return (
@@ -13,3 +14,7 @@ class Button extends React.Component {
   }
 }
 export default Button;
+
+Button.propTypes = {
+  btnClickHandler: PropTypes.func.isRequired,
+};

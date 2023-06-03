@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Modal extends React.Component {
   clickHandler = e => {
@@ -32,3 +33,9 @@ class Modal extends React.Component {
   }
 }
 export default Modal;
+
+Modal.propTypes = {
+  url: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+  toggleModal: PropTypes.func.isRequired,
+};
