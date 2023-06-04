@@ -78,12 +78,6 @@ class App extends React.Component {
       document.body.style.overflow = 'visible';
       document.body.style.top = '';
       window.scrollTo(0, scroll);
-
-      const el = document.querySelector('.ImageGallery');
-      const getprop = window
-        .getComputedStyle(el, null)
-        .getPropertyValue('margin-left');
-      console.log(getprop);
     }
     this.setState(prevState => {
       return { modalOn: !this.state.modalOn };
