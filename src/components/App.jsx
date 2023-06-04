@@ -62,6 +62,13 @@ class App extends React.Component {
   };
 
   toggleModal = () => {
+    this.underBackdropScrollHandler();
+    this.setState(prevState => {
+      return { modalOn: !this.state.modalOn };
+    });
+  };
+
+  underBackdropScrollHandler = () => {
     if (!this.state.modalOn) {
       const el = document.querySelector('.ImageGallery');
       const getprop = window
@@ -79,12 +86,7 @@ class App extends React.Component {
       document.body.style.top = '';
       window.scrollTo(0, scroll);
     }
-    this.setState(prevState => {
-      return { modalOn: !this.state.modalOn };
-    });
   };
-
-  scrollHandler = () => {};
 
   scrolling() {
     setTimeout(() => {
