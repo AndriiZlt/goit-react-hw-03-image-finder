@@ -68,16 +68,16 @@ class App extends React.Component {
         .getComputedStyle(el, null)
         .getPropertyValue('margin-left');
 
-      document.body.classList.add('overflowHidden');
+      document.body.style.overflow = 'hidden';
       document.body.style.position = 'fixed';
 
       el.style.marginLeft = getprop;
     } else {
       const scroll = this.state.scroll;
       document.body.style.position = 'static';
+      document.body.style.overflow = 'visible';
       document.body.style.top = '';
       window.scrollTo(0, scroll);
-      document.querySelector('body').classList.remove('overflowHidden');
 
       const el = document.querySelector('.ImageGallery');
       const getprop = window
