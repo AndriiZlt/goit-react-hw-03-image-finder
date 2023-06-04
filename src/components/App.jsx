@@ -69,6 +69,7 @@ class App extends React.Component {
   };
 
   underBackdropScrollHandler = () => {
+    // Preventing scrolling under backdrop
     if (!this.state.modalOn) {
       const el = document.querySelector('.ImageGallery');
       const getprop = window
