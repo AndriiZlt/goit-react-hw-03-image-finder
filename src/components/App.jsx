@@ -69,23 +69,22 @@ class App extends React.Component {
   };
 
   underBackdropScrollHandler = () => {
-    // Preventing scrolling under backdrop
+    // Preventing scrolling under backdrop and margin-left issue
     if (!this.state.modalOn) {
       const el = document.querySelector('.ImageGallery');
-      const getprop = window
+      const marginLeft = window
         .getComputedStyle(el, null)
         .getPropertyValue('margin-left');
 
       document.body.style.overflow = 'hidden';
       document.body.style.position = 'fixed';
 
-      el.style.marginLeft = getprop;
+      el.style.marginLeft = marginLeft;
     } else {
-      const scroll = this.state.scroll;
       document.body.style.position = 'static';
       document.body.style.overflow = 'visible';
       document.body.style.top = '';
-      window.scrollTo(0, scroll);
+      window.scrollTo(0, this.state.scroll);
     }
   };
 
