@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ImageGalleryItem from 'components/ImageGalleryItem/ImageGalleryItem';
-
 class ImageGallery extends React.Component {
   render() {
     return (
@@ -26,16 +25,13 @@ class ImageGallery extends React.Component {
 export default ImageGallery;
 
 ImageGallery.propTypes = {
-  galleryItems: PropTypes.arrayOf(
-    PropTypes.exact({
-      key: PropTypes.string.isRequired,
-      webformatURL: PropTypes.string.isRequired,
-      largeImageURL: PropTypes.string.isRequired,
-      tags: PropTypes.string.isRequired,
-      onClick: PropTypes.func.isRequired,
-      modalHandler: PropTypes.func.isRequired,
-    })
-  ),
+  // galleryItems: PropTypes.arrayOf(
+  //   PropTypes.exact({
+  //     webformatURL: PropTypes.string.isRequired,
+  //     largeImageURL: PropTypes.string.isRequired,
+  //     tags: PropTypes.string.isRequired,
+  //   })
+  // ),
   toggleModal: PropTypes.func.isRequired,
   modalHandler: PropTypes.func.isRequired,
 };

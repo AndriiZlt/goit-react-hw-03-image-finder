@@ -36,6 +36,6 @@ export default Modal;
 
 Modal.propTypes = {
   url: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
+  alt: PropTypes.string,
   toggleModal: PropTypes.func.isRequired,
 };

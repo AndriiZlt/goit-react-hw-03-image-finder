@@ -90,6 +90,20 @@ class App extends React.Component {
     });
   };
 
+  scrollHandler = () => {};
+
+  scrolling() {
+    setTimeout(() => {
+      const { height: cardHeight } = document
+        .querySelector('.ImageGallery')
+        .firstElementChild.getBoundingClientRect();
+      window.scrollBy({
+        top: cardHeight * 4,
+        behavior: 'smooth',
+      });
+    }, 300);
+  }
+
   modalHandler = ({ dataset, alt }) => {
     document.body.style.top = `-${window.scrollY}px`;
     this.setState({
@@ -105,18 +119,6 @@ class App extends React.Component {
       return { page: prevState.page + 1 };
     });
   };
-
-  scrolling() {
-    setTimeout(() => {
-      const { height: cardHeight } = document
-        .querySelector('.ImageGallery')
-        .firstElementChild.getBoundingClientRect();
-      window.scrollBy({
-        top: cardHeight * 4,
-        behavior: 'smooth',
-      });
-    }, 300);
-  }
 
   render() {
     return (

@@ -23,10 +23,9 @@ class ImageGalleryItem extends React.Component {
 export default ImageGalleryItem;
 
 ImageGalleryItem.propTypes = {
-  key: PropTypes.string.isRequired,
   webformatURL: PropTypes.string.isRequired,
   largeImageURL: PropTypes.string.isRequired,
-  tags: PropTypes.string.isRequired,
+  tags: PropTypes.string,
   onClick: PropTypes.func.isRequired,
   modalHandler: PropTypes.func.isRequired,
 };
